@@ -19,5 +19,15 @@ def generate_launch_description():
         [
             # TODO: Add talker node with message_prefix parameter
             # TODO: Add listener node
+           Node(
+             package='ros2_launch_demo',
+             executable='talker',
+             parameters=[{'message_prefix': 'ROS2'}]
+            ),
+
+         Node(
+          package='ros2_launch_demo',
+          executable='listener'
+         ),
         ]
     )
